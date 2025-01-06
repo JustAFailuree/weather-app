@@ -73,7 +73,7 @@ public class UserController {
 
     @GetMapping("/change-city")
     public String getChangeCityPage() {
-        return "change-city"; // Wyświetla formularz zmiany miasta
+        return "change-city";
     }
 
     @PostMapping("/change-city")

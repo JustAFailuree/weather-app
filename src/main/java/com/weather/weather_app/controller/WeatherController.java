@@ -60,7 +60,7 @@ public class WeatherController {
             }
 
             if (city == null || city.isEmpty()) {
-                model.addAttribute("error", "City not provided.");
+                model.addAttribute("error", "Podaj Miasto.");
                 return "error";
             }
 
