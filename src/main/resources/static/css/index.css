@@ -1,0 +1,39 @@
+body {
+    background: linear-gradient(to top,#065A60, #3E1F47);
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+.container {
+    margin-top: 100px;
+}
+.card {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.form-control {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.btn-primary {
+    background: linear-gradient(to left, #272640, #144552);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.btn-primary:hover {
+    background: linear-gradient(to left, #144552, #272640);
+    transform: translateY(-2px);
+}

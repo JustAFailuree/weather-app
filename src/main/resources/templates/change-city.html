@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pogoda</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/weather.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/weather">☁️</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/weather">Miasto domowe</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/index">Pogoda w innym mieście</a>
+            </li>
+            <li class="nav-item">
+                <a th:href="@{/weather/tomorrow(city=${city})}" class="nav-link">Pogoda na jutro</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Wyloguj</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-center">Zmień Miasto</h2>
+                    <form action="/change-city" method="post" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="newCity" class="form-label">Nowe Miasto:</label>
+                            <input type="text" name="newCity" id="newCity" class="form-control" placeholder="Wprowadź nowe miasto" required>
+                            <div class="invalid-feedback">
+                                Proszę wprowadzić nazwę miasta.
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Zmień Miasto</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+body {
+    background: url('../images/pexels-magda-ehlers-pexels-2114014.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+.container {
+    margin-top: 100px;
+}
+.card {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.weather-icon {
+    font-size: 100px;
+    color: deepskyblue;
+    padding-bottom: 10px;
+}
+.card-text {
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+.card-text:hover {
+    color: deepskyblue;
+}
+
+.forecast-container {
+    margin-top: 20px;
+}
+.forecast-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+.forecast-item:last-child {
+    border-bottom: none;
+}
+.forecast-date {
+    font-weight: bold;
+}
+.weather-icon {
+    font-size: 24px;
+}
+.forecast-temp, .forecast-desc {
+    margin-left: 10px;
+}
+.list-group-item{
+    background-color: rgba(204,255,255,0.4);
+}
+
+.list-group{
+    color: black;
+    border-right: 30px;
+}
+
+#ikonki{
+    font-size: 30px;
+    color: blueviolet;
+}
+
+.navbar{
+    background-color: #144552;
+}
